@@ -1,7 +1,9 @@
 package Factory;
 
+import Interface.iMesa;
 import Interface.iSilla;
 import Interface.iSillon;
+import Model.MesaVictoriana;
 import Model.SillaVictoriana;
 import Model.SillonVictoriana;
 
@@ -17,6 +19,7 @@ public class FabricaMueblesVictorianos extends FabricaAbstracta {
 		
 		return null;
 	}
+	
 
 	@Override
 	public iSillon getiSillon(String tipoSillon) {
@@ -29,4 +32,18 @@ public class FabricaMueblesVictorianos extends FabricaAbstracta {
 	}
 	
 
+	@Override
+	public iMesa getiMesa(String tipoMesa) {
+		
+		if (tipoMesa.equalsIgnoreCase("MESA")) {
+			
+			return new MesaVictoriana();
+		
+		}
+		
+		return null;
+		
+	}
+	
+	
 }
