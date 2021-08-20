@@ -3,9 +3,8 @@ package Factory;
 import Interface.iSilla;
 import Interface.iSillon;
 import Model.SillaModerna;
-import Model.SillaVictoriana;
 import Model.SillonModerna;
-import Model.SillonVictoriana;
+
 
 public class FabricaMueblesModernos extends FabricaAbstracta {
 
@@ -14,8 +13,8 @@ public class FabricaMueblesModernos extends FabricaAbstracta {
 		
 		if (tipoSilla.equalsIgnoreCase("SILLA")) {
 			return new SillaModerna();
-		
 		}
+		
 		return null;
 	}
 
@@ -25,6 +24,7 @@ public class FabricaMueblesModernos extends FabricaAbstracta {
 		if (tipoSillon.equalsIgnoreCase("SILLON")) {
 			return new SillonModerna();
 		}
+		
 		return null;
 	}
 
