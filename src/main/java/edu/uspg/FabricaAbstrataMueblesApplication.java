@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 import Factory.FabricaMueblesModernos;
+import Factory.FabricaMueblesVictorianos;
 import Interface.iSilla;
 
 
@@ -13,12 +14,32 @@ public class FabricaAbstrataMueblesApplication {
 		
 	public static void main(String[] args) {
 		
-		FabricaMueblesModernos fabrica = new FabricaMueblesModernos();
+			//Modernos
+		System.out.println("   -----Muebles Modernos-----");
+		System.out.println(" ");
 		
-		iSilla silla = fabrica.getiSilla("Silla");
+		FabricaMueblesModernos fabricaM = new FabricaMueblesModernos();
 		
-		silla.sentarse();
-		silla.tienePatas();
+		iSilla sillaM = fabricaM.getiSilla("Silla");
+		
+		sillaM.sentarse();
+		sillaM.tienePatas();
+		
+		System.out.println(" ");
+		System.out.println("------------------------------------------");
+		System.out.println(" ");
+		
+		//Victorianos
+		System.out.println("   -----Muebles Modernos-----");
+		System.out.println(" ");
+		
+		FabricaMueblesVictorianos fabricaV = new FabricaMueblesVictorianos();
+		
+		iSilla sillaV = fabricaV.getiSilla("Silla");
+		
+		sillaV.sentarse();
+		sillaV.tienePatas();
+		
 	}
 
 }
