@@ -7,6 +7,7 @@ import Factory.FabricaMueblesModernos;
 import Factory.FabricaMueblesVictorianos;
 import Interface.iMesa;
 import Interface.iSilla;
+import Interface.iSillon;
 
 
 
@@ -15,7 +16,8 @@ public class FabricaAbstrataMueblesApplication {
 		
 	public static void main(String[] args) {
 		
-			//Modernos
+				//Modernos
+		
 		System.out.println("   -----Muebles Modernos-----");
 		System.out.println(" ");
 		
@@ -27,20 +29,33 @@ public class FabricaAbstrataMueblesApplication {
 		sillaM.sentarse();
 		sillaM.tienePatas();
 		
-		System.out.println("////////////////////////////");
+		System.out.println("//////////////////////////////////////////////////////");
 		
 		System.out.println("   ——Mesa Moderna——");
 		iMesa mesaM = fabricaM.getiMesa("Mesa");
 		
 		mesaM.tienePatas();
 		mesaM.numeroPersonas();
+
+		System.out.println("//////////////////////////////////////////////////////");
+		
+		System.out.println("   ——Sillón Moderna——");
+		iSillon sillonM = fabricaM.getiSillon("Sillon");
+		
+		sillonM.tienePatas();
+		sillonM.numeroPersonas();
+		
+		
 		
 		System.out.println(" ");
 		System.out.println("------------------------------------------");
 		System.out.println(" ");
 		
-		//Victorianos
-		System.out.println("   -----Muebles Modernos-----");
+		
+		
+				//Victorianos
+		
+		System.out.println("   -----Muebles Victorianos-----");
 		System.out.println(" ");
 		
 		FabricaMueblesVictorianos fabricaV = new FabricaMueblesVictorianos();
@@ -51,14 +66,21 @@ public class FabricaAbstrataMueblesApplication {
 		sillaV.sentarse();
 		sillaV.tienePatas();
 		
-		System.out.println("//////////////////////////////////////////");
+		System.out.println("//////////////////////////////////////////////////////");
 		
 		System.out.println("   ——Mesa Victoriana——");
 		iMesa mesaV = fabricaV.getiMesa("Mesa");
 		
 		mesaV.tienePatas();
 		mesaV.numeroPersonas();
+
+		System.out.println("//////////////////////////////////////////////////////");
 		
+		System.out.println("   ——Sillón Victoriana——");
+		iSillon sillonV = fabricaV.getiSillon("Sillon");
+		
+		sillonV.numeroPersonas();
+		sillonV.tienePatas();
 		
 	}
 
