@@ -2,20 +2,23 @@ package edu.uspg;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 import Factory.FabricaMueblesModernos;
+import Interface.iSilla;
+
+
 
 @SpringBootApplication
 public class FabricaAbstrataMueblesApplication {
-
+		
 	public static void main(String[] args) {
 		
-		//GetFabricas fabricas = new GetFabricas();
+		FabricaMueblesModernos fabrica = new FabricaMueblesModernos();
 		
-	//	GetFabricas iSilla = fabricas.Modernos();
+		iSilla silla = fabrica.getiSilla("Silla");
 		
-		FabricaMueblesModernos modernos = new FabricaMueblesModernos();
-		
-		modernos.equals(modernos);
+		silla.sentarse();
+		silla.tienePatas();
 	}
 
 }
