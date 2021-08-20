@@ -6,7 +6,7 @@ public class SillaModerna implements iSilla {
 
 	@Override
 	public void tienePatas() {
-		System.out.println("Silla moderna tiene una base solida para las patras");
+		System.out.println("Silla moderna tiene una base solida para las patas");
 		
 	}
 
